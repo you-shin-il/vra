@@ -1,0 +1,44 @@
+###
+POST http://localhost:8080/vra/blueprint/api/blueprints.do
+Content-Type:  application/json
+Accept: application/json
+###
+POST http://localhost:8080/vra/login.do
+
+###
+
+###
+POST https://vra.bi.co.kr/csp/gateway/am/api/login
+Content-Type:  application/json
+Accept: application/json
+
+{
+"username" : "admin",
+"password" : "admin123!Q"
+}
+
+###
+
+###
+POST https://vra.vmkloud.com/csp/gateway/am/api/login
+Content-Type:  application/json
+Accept: application/json
+
+{
+  "username" : "injeinc",
+  "password" : "vkxmsjdlswo1!"
+}
+
+###
+
+###
+POST  https://vrops.vmkloud.com/api/auth/token/acquire
+Content-Type:  application/json
+Accept: application/json
+
+{
+  "username" : "injeinc",
+  "password" : "vkxmsjdlswo1!"
+}
+
+###
