@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class Restful {
+public class TokenService {
     /*
         API 구분 : Identity Service API
         API NAME : /csp/gateway/am/api/login
@@ -35,7 +35,7 @@ public class Restful {
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(bodyMap, headers);
 
         // send POST request
-        ResponseEntity<String> response = restTemplate.postForEntity("https://vra.bi.co.kr/" + LOGIN_URL, entity, String.class);
+        ResponseEntity<Map> response = restTemplate.postForEntity("https://vra.bi.co.kr/" + LOGIN_URL, entity, Map.class);
 
         // check response
         if (response.getStatusCode() == HttpStatus.CREATED) {
@@ -45,8 +45,10 @@ public class Restful {
             System.out.println("Request Failed");
             System.out.println(response.getStatusCode());
         }
-        Object result = response.getHeaders().get("Authorization").stream().findFirst();
+        Map<String, String> body = response.getBody();
+        String token = body.get("cspAuthToken");
+        //Object result = response.getHeaders().get("Authorization").stream().findFirst();
 
-        return result;
+        return token;
     }
 }

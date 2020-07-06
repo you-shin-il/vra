@@ -1,9 +1,26 @@
 ###
-POST http://localhost:8080/vra/blueprint/api/blueprints.do
+GET http://localhost:9090/vra/compute/iaas/api/machines.do
 Content-Type:  application/json
 Accept: application/json
 ###
-POST http://localhost:8080/vra/login.do
+
+###
+GET http://localhost:9090/vra/deployment/iaas/api/deployments.do
+Content-Type:  application/json
+Accept: application/json
+###
+
+###
+GET http://localhost:9090/vra/compute/iaas/api/machine.do?id=8e57e61b9c4e7255
+Content-Type:  application/json
+Accept: application/json
+###
+
+GET http://localhost:9090/vra/blueprint/api/blueprints.do
+Content-Type:  application/json
+Accept: application/json
+###
+POST http://localhost:9090/vra/login.do
 
 ###
 

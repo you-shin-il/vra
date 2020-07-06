@@ -57,6 +57,13 @@
             <version>2.7.5</version>
         </dependency>
 
+        <!-- <dependency> -콘파스버전에서 쓰는것 <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId> <version>4.5.3</version> </dependency> --><!-- URIBuilder addParameter 메소드 4.3.6버전에서 해야 정상 작동함 -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.5</version>
+        </dependency>
     </dependencies>
 
     <build>
